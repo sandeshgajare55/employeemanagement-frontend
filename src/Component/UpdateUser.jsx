@@ -1,7 +1,18 @@
 import React, { useState } from 'react'
 
 export default function UpdateUser({ handleOnSubmit, value, handlechange }) {
-
+    function phoneno() {
+        $('#mobile_number').keypress(function (e) {
+            var a = [];
+            var k = e.which;
+    
+            for (i = 48; i < 58; i++)
+                a.push(i);
+    
+            if (!(a.indexOf(k) >= 0))
+                e.preventDefault();
+        });
+    }
     return (
         <>
 
@@ -31,7 +42,7 @@ export default function UpdateUser({ handleOnSubmit, value, handlechange }) {
                                 <div className="form-group">
                                     <label>Phone</label>
 
-                                    <input type="text" value={value.phone} name='phone' onChange={handlechange} className="form-control" />
+                                    <input type="text" value={value.phone} name='phone' onChange={phoneno} className="form-control" />
                                 </div>
                             </div>
                             <div className="modal-footer">
