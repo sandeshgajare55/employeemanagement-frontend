@@ -34,6 +34,7 @@ export default function AddUser() {
     } else if (/\d/.test(value.name)) {
       toast.error("Name cannot contain numbers.");
       isValid = false;
+      console.log('Number if')
     }
     if (!value.fathername.trim()) {
       tempErrors.fathername = "Father Name is required";

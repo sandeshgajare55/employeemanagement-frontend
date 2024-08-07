@@ -145,8 +145,7 @@ export default function UpdateUser({handleOnSubmit,value, handleChange}) {
                 <input
                   type="submit"
                   className="btn btn-primary"
-                  value="Update"
-                  data-bs-dismiss="modal"
+                  value="Update" 
                 />
               </div>
             </form>

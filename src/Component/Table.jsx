@@ -24,10 +24,7 @@ export default function Table({ DeleteUser, UpdateUser }) {
   if (error) return <p>Error: {error}</p>;
 
 
-  function demo(){
-    UpdateUser(elem._id);
-    fetchData();
-  }
+ 
   return (
     <div className="container">
       <div className="table-wrapper">
