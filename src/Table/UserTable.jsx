@@ -101,16 +101,16 @@ export default function UserTable() {
   
  const handleOnSubmit = async (e) => {
   e.preventDefault();
-  const isValids = validate();
-  console.log(isValids);
-  if (isValids) {
+  const valid = validate();
+  console.log(valid);
+  if (valid) {
     try {
         const response = await axios.put(`http://localhost:8000/api/updateuser/${updatedUserId}`, value);
         console.log('User updated successfully:', response.data);
         if (response.data.success || validate()) {
           //toast.success(response.data.message);
           toast.success("Employee Updated");
-          CloseRef.current.click();
+          // CloseRef.current.click();
           window.location.reload();
           // Fetch data again to reflect changes or update state imp
         }
